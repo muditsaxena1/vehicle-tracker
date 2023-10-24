@@ -1,0 +1,5 @@
+docker run --name vt-db -e MYSQL_ROOT_PASSWORD=H5f4JAs106e8CY7 -d -p 3306:3306 mysql/mysql-server:8.0
+docker exec -it vt-db mysql -u root -p
+CREATE USER 'root'@'%' IDENTIFIED BY 'some_pass';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
+FLUSH PRIVILEGES;
